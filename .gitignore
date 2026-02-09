@@ -1,0 +1,10 @@
+.parquet
+.DS_Store
+__pycache__/
+.ipynb_checkpoints/
+.vscode/
+env/
+*.pyc
+*.egg-info/
+data/*
+
