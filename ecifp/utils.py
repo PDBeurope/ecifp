@@ -1,4 +1,5 @@
 import numpy as np
+from pathlib import Path
 import requests
 from requests.exceptions import RequestException, Timeout, HTTPError
 from numpy.typing import NDArray
@@ -10,6 +11,7 @@ import tempfile
 from pdbeccdutils.core import ccd_reader
 from rdkit.Chem import rdFingerprintGenerator
 from sklearn.metrics import roc_curve, auc, RocCurveDisplay
+import configparser
 
 
 @njit(int32(uint32))
@@ -186,3 +188,11 @@ def get_preferred_assembly(entry_id):
     else:
         print(f"Could not retrieve preferred assembly for entry {entry_id}")
         return None
+
+
+def get_data_dir():
+    ## Get the data directory
+    config = configparser.ConfigParser()
+    config_file = Path().cwd().parent / 'conf.ini'
+    config.read(config_file)
+    return Path(config['DEFAULT']['Data'])
