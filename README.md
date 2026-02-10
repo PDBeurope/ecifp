@@ -78,6 +78,10 @@ jupyter lab
 
 The `nbs/` directory contains the following Jupyter notebooks:
 
+> [!NOTE]  
+> Before running the notebooks, download data from [10.5281/zenodo.18557398](10.5281/zenodo.18557398) and set the path
+to data in `conf.ini` file
+
 ### 1. `generate_ecifp.ipynb`
 Generates Extended Connectivity Interaction Fingerprints (ECIFP) for protein-ligand complexes using their interaction data
 
