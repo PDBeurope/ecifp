@@ -79,7 +79,7 @@ jupyter lab
 The `nbs/` directory contains the following Jupyter notebooks:
 
 > [!NOTE]  
-> Before running the notebooks, download data from [10.5281/zenodo.18557398](10.5281/zenodo.18557398) and set the path
+> Before running the notebooks, download data from [10.5281/zenodo.18557398](https://doi.org/10.5281/zenodo.18557398) and set the path
 to data in `conf.ini` file
 
 ### 1. `generate_ecifp.ipynb`
@@ -125,7 +125,7 @@ ecifp/
 
 ## License
 
-CC0 1.0 Universal
+[CC0 1.0 Universal](https://github.com/PDBeurope/ecifp/blob/main/LICENSE)
 
 ## Citation
 
