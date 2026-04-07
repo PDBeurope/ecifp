@@ -62,7 +62,16 @@ def get_polymer_ifp(intx_polymer_atoms:dict[str, set[str]], fp_radius, fp_size):
     ifp[list(on_indices)] = 1
     return ifp
 
-def get_ecifp_sim(ecifp_1, ecifp_2,ligand_coeff, protein_coeff):
+def get_ecifp_sim(ecifp_1: ECIFP, ecifp_2: ECIFP, ligand_coeff: float, protein_coeff: float) -> float:
+    """
+    Returns the similarity of two protein-ligand complexes, given their ECIFP
+
+    Parameters:
+        ecifp_1: ECIFP of the first complex 
+        ecifp_2: ECIFP of the second complex
+        ligand_coeff: Exponent weight for ligand similarity contribution. 
+        protein_coeff: Exponent weight for protein similarity contribution.
+    """
     ligand_sim = tanimoto_uint32(ecifp_1.ligand_ifp.view(np.uint32),
                                  ecifp_2.ligand_ifp.view(np.uint32))
     protein_sim = tanimoto_uint32(ecifp_1.protein_ifp.view(np.uint32),
