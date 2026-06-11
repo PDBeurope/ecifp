@@ -18,6 +18,7 @@ dependencies = [
     "pandas>=3.0.0",
     "pdbeccdutils>=1.0.0",
     "pyarrow>=23.0.1",
+    "pygments>=2.20.0",
     "pyminimax>=0.1.2",
     "scikit-learn>=1.8.0",
 ]
