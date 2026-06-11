@@ -17,7 +17,7 @@ dependencies = [
     "numba==0.62.1",
     "pandas>=3.0.0",
     "pdbeccdutils>=1.0.0",
-    "pyarrow>=23.0.0",
+    "pyarrow>=23.0.1",
     "pyminimax>=0.1.2",
     "scikit-learn>=1.8.0",
 ]
